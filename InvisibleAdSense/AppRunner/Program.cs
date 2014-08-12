@@ -13,9 +13,9 @@ namespace AppRunner
         {
             var spawner = new Spawner();
 
-            spawner.Spawn();
+            var browser = spawner.Spawn();
 
-            Console.ReadLine();
+            browser.GoTo("http://google.co.uk");
         }
     }
 }

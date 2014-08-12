@@ -23,5 +23,15 @@ namespace InvisibleAdSense
         {
             TheDriver.Close();
         }
+
+        /// <summary>
+        /// Goes to.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        public void GoTo(string url)
+        {
+            TheDriver.Url = url;
+            TheDriver.Navigate();
+        }
     }
 }

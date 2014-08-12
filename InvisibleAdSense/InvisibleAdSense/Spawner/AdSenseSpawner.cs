@@ -41,9 +41,7 @@ namespace InvisibleAdSense.Spawner
         /// <returns></returns>
         public AdSenseDriver Spawn()
         {
-            var aDriver = new PhantomJSDriver(_driverService);
-
-            var newAdSenseDriver = new AdSenseDriver(aDriver);
+            var newAdSenseDriver = new AdSenseDriver(_driverService);
 
             Cache.Add(newAdSenseDriver);
 

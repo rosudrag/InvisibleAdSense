@@ -8,7 +8,7 @@ using InvisibleAdSense.Spawner;
 
 namespace AppRunner
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -24,10 +24,10 @@ namespace AppRunner
         /// <summary>
         /// Registers the despawn on process exit.
         /// </summary>
-        /// <param name="adSenseSpawner">The AdSenseSpawner.</param>
-        private static void RegisterDespawnOnProcessExit(AdSenseSpawner adSenseSpawner)
+        /// <param name="spawner">The AdSenseSpawner.</param>
+        private static void RegisterDespawnOnProcessExit(ISpawner spawner)
         {
-            AppDomain.CurrentDomain.ProcessExit += adSenseSpawner.CloseHandler;
+            AppDomain.CurrentDomain.ProcessExit += spawner.CloseHandler;
         }
     }
 }

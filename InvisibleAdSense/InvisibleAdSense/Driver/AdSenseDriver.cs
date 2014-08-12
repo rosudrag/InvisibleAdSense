@@ -6,32 +6,15 @@ using OpenQA.Selenium.PhantomJS;
 
 namespace InvisibleAdSense.Driver
 {
-    public class AdSenseDriver : IAdSenseDriver
+    public class AdSenseDriver : PhantomJSDriver,  IAdSenseDriver
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdSenseDriver" /> class.
+        /// Initializes a new instance of the <see cref="AdSenseDriver"/> class.
         /// </summary>
-        /// <param name="aDriver">A driver.</param>
-        public AdSenseDriver(PhantomJSDriver aDriver)
+        /// <param name="service">The <see cref="T:OpenQA.Selenium.PhantomJS.PhantomJSDriverService" /> used to initialize the driver.</param>
+        public AdSenseDriver(PhantomJSDriverService service) : base(service)
         {
-            TheDriver = aDriver;
-        }
-
-        /// <summary>
-        ///     Gets or sets the driver.
-        /// </summary>
-        /// <value>
-        ///     The driver.
-        /// </value>
-        private PhantomJSDriver TheDriver { get; set; }
-
-        /// <summary>
-        ///     Closes this instance.
-        /// </summary>
-        public void Close()
-        {
-            TheDriver.Close();
-            TheDriver.Dispose();
+            
         }
 
         /// <summary>
@@ -40,8 +23,8 @@ namespace InvisibleAdSense.Driver
         /// <param name="url">The URL.</param>
         public void GoTo(string url)
         {
-            TheDriver.Url = url;
-            TheDriver.Navigate();
+            Url = url;
+            Navigate();
         }
     }
 }

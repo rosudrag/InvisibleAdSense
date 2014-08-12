@@ -48,11 +48,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdSenseDriver.cs" />
-    <Compile Include="IAdSenseDriver.cs" />
-    <Compile Include="ISpawner.cs" />
+    <Compile Include="Driver\AdSenseDriver.cs" />
+    <Compile Include="Driver\IAdSenseDriver.cs" />
+    <Compile Include="Spawner\ISpawner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spawner.cs" />
+    <Compile Include="Spawner\AdSenseSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

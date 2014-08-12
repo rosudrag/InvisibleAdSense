@@ -15,5 +15,13 @@ namespace InvisibleAdSense
         {
             TheDriver = aDriver;
         }
+
+        /// <summary>
+        /// Closes this instance.
+        /// </summary>
+        public void Close()
+        {
+            TheDriver.Close();
+        }
     }
 }

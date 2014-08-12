@@ -6,7 +6,7 @@ namespace InvisibleAdSense
     {
         List<IAdSenseDriver> Cache { get; set; }
 
-        AdSenseDriver Spawn(string url);
+        AdSenseDriver Spawn();
         void Despawn(IAdSenseDriver toDespawn);
     }
 }

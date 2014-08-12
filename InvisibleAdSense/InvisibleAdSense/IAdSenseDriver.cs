@@ -2,5 +2,6 @@
 {
     public interface IAdSenseDriver
     {
+        void Close();
     }
 }
